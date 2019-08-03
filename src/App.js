@@ -1,14 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+
 import './App.css';
 
 import HomePage from './pages/homepage/homepage.component';
 
-class App extends Component {
-  render() {
-    return <div>
-      <HomePage />
-    </div>;
-  }
+const HatsPage = () => (
+  <div>
+    <h1>HATS PAGE </h1>
+  </div>
+);
+
+function App() {
+  return (
+    <div>
+      <Switch>
+        {/*только наш компонент домашней страницы 
+          получает доступ к реквизиту истории, потому 
+          используем hoc withRouter()*/}
+        <Route exact path='/' component={HomePage} />
+        <Route path='/hats' component={HatsPage} />
+      </Switch>
+    </div>
+  );
 }
 
 export default App;
