@@ -4,7 +4,7 @@ import CheckoutItem from '../../components/checkout-item/checkout-item.component
 import './checkout.styles.scss';
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button.omponent';
 
-import CartContext from '../../providers/cart/cart.provider';
+import { CartContext } from '../../providers/cart/cart.provider';
 
 const CheckoutPage = () => {
   const { cartItems, cartTotal } = useContext(CartContext);
