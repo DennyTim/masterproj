@@ -6,10 +6,14 @@ import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
 import Spinner from '../../components/spinner/spinner.component';
 
 const CollectionsOverviewContainer = lazy(() =>
-  import('../../components/collection-overview/collection-overview.container')
+  import(
+    '../../components/collection-overview/collection-overview.container'
+  ).then(module => ({ default: module.CollectionsOverviewContainer }))
 );
 const CollectionPageContainer = lazy(() =>
-  import('../collection/collection.container')
+  import('../collection/collection.container').then(module => ({
+    default: module.CollectionPageContainer
+  }))
 );
 
 const ShopPage = ({ fetchCollectionsStart, match }) => {

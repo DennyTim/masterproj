@@ -27,8 +27,8 @@ const App = ({ checkUserSession, currentUser }) => {
     <div>
       <GlobalStyle />
       <Header />
-      <Switch>
-        <ErrorBoudary>
+      <ErrorBoudary>
+        <Switch>
           {/*только наш компонент домашней страницы 
           получает доступ к реквизиту истории, потому 
           используем hoc withRouter()*/}
@@ -44,8 +44,8 @@ const App = ({ checkUserSession, currentUser }) => {
               }
             />
           </Suspense>
-        </ErrorBoudary>
-      </Switch>
+        </Switch>
+      </ErrorBoudary>
     </div>
   );
 };
