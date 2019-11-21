@@ -19,6 +19,7 @@ const CollectionPageContainer = lazy(() =>
 const ShopPage = ({ fetchCollectionsStart, match }) => {
   useEffect(() => {
     fetchCollectionsStart();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
